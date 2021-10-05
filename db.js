@@ -4,9 +4,12 @@ import mongoose from "mongoose";
 
 const db = {
   connect: function () {
-    mongoose.connect("mongodb://localhost:27017/db_icecream_api", {
-      useNewUrlParser: true,
-    });
+    mongoose.connect(
+      "mongodb+srv://bduser:Contadia2020@cluster0.0oz81.mongodb.net/test?retryWrites=true&w=majority",
+      {
+        useNewUrlParser: true,
+      }
+    );
 
     mongoose.connection.on("error", function (e) {
       console.error(e);
