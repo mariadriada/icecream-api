@@ -12,6 +12,10 @@ const app = express();
 // use json
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Mi api");
+});
+
 // Routes icecream
 app.get(heladosRoutes.GET, icecreamCtrl.getAll);
 app.get(heladosRoutes.GET_ONE, icecreamCtrl.getOne);
